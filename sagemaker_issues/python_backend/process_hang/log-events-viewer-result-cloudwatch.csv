@@ -1,0 +1,323 @@
+timestamp,message
+1676619916771,'"+------------------+------+"
+1676619916771,'"+------------------+------+"
+1676619916771,I0217 07:45:16.668025 86 server.cc:590] 
+1676619916771,'"+---------+------+--------+"
+1676619916771,| Backend | Path | Config |
+1676619916771,'"+---------+------+--------+"
+1676619916771,'"+---------+------+--------+"
+1676619916771,I0217 07:45:16.668042 86 server.cc:633] 
+1676619916771,'"+-------+---------+--------+"
+1676619916771,| Model | Version | Status |
+1676619916771,'"+-------+---------+--------+"
+1676619916771,'"+-------+---------+--------+"
+1676619916771,I0217 07:45:16.668163 86 tritonserver.cc:2264] 
+1676619916771,'"+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+"
+1676619916771,| Option                           | Value                                                                                                                                                                                                |
+1676619916771,'"+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+"
+1676619916771,| server_id                        | triton                                                                                                                                                                                               |
+1676619916771,| server_version                   | 2.29.0                                                                                                                                                                                               |
+1676619916771,| server_extensions                | classification sequence model_repository model_repository(unload_dependents) schedule_policy model_configuration system_shared_memory cuda_shared_memory binary_tensor_data statistics trace logging |
+1676619916771,| model_repository_path[0]         | /opt/ml/models/                                                                                                                                                                                      |
+1676619916771,| model_control_mode               | MODE_EXPLICIT                                                                                                                                                                                        |
+1676619916771,| strict_model_config              | 0                                                                                                                                                                                                    |
+1676619916771,| rate_limit                       | OFF                                                                                                                                                                                                  |
+1676619916771,| pinned_memory_pool_byte_size     | 268435456                                                                                                                                                                                            |
+1676619916771,| cuda_memory_pool_byte_size{0}    | 67108864                                                                                                                                                                                             |
+1676619916771,| response_cache_byte_size         | 0                                                                                                                                                                                                    |
+1676619916771,| min_supported_compute_capability | 6.0                                                                                                                                                                                                  |
+1676619916771,| strict_readiness                 | 1                                                                                                                                                                                                    |
+1676619916771,| exit_timeout                     | 30                                                                                                                                                                                                   |
+1676619916771,'"+----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+"
+1676619921607,I0217 07:45:16.668627 86 sagemaker_server.cc:281] Started Sagemaker HTTPService at 0.0.0.0:8080
+1676620075221,I0217 07:47:55.192739 86 sagemaker_server.cc:343] Loading SageMaker TargetModel: e2e-1.tar.gz
+1676620075221,I0217 07:47:55.192921 86 model_repository_manager.cc:1376] Model repository registered: /opt/ml/models/ac5451a878f21055fadb5522c95e4d7b/model
+1676620075221,W0217 07:47:55.195473 86 model_lifecycle.cc:107] ignore version directory '.ipynb_checkpoints' which fails to convert to integral number
+1676620075221,W0217 07:47:55.195524 86 model_lifecycle.cc:107] ignore version directory 'model' which fails to convert to integral number
+1676620075221,W0217 07:47:55.195536 86 model_lifecycle.cc:107] ignore version directory 'tokenizer' which fails to convert to integral number
+1676620076475,I0217 07:47:55.195557 86 model_lifecycle.cc:459] loading: ac5451a878f21055fadb5522c95e4d7b:1
+1676620077227,I0217 07:47:56.447819 86 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: ac5451a878f21055fadb5522c95e4d7b_0 (GPU device 0)
+1676620081283,"Collecting torch
+  Downloading torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)"
+1676620091517,     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 1.4 MB/s eta 0:00:00
+1676620092018,"Collecting transformers==4.9.1
+  Downloading transformers-4.9.1-py3-none-any.whl (2.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.6/2.6 MB 102.0 MB/s eta 0:00:00"
+1676620092519,"Collecting filelock
+  Downloading filelock-3.9.0-py3-none-any.whl (9.7 kB)"
+1676620092519,"Collecting regex!=2019.12.17
+  Downloading regex-2022.10.31-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (772 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 772.3/772.3 kB 82.5 MB/s eta 0:00:00"
+1676620092770,Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from transformers==4.9.1->-r /opt/ml/models/ac5451a878f21055fadb5522c95e4d7b/model/e2e-1/requirements.txt (line 2)) (2.22.0)
+1676620092770,"Collecting tokenizers<0.11,>=0.10.1
+  Downloading tokenizers-0.10.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (3.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 108.9 MB/s eta 0:00:00"
+1676620092770,"Collecting packaging
+  Downloading packaging-23.0-py3-none-any.whl (42 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.7/42.7 kB 8.4 MB/s eta 0:00:00"
+1676620092770,"Collecting huggingface-hub==0.0.12
+  Downloading huggingface_hub-0.0.12-py3-none-any.whl (37 kB)"
+1676620093021,"Collecting sacremoses
+  Downloading sacremoses-0.0.53.tar.gz (880 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 880.6/880.6 kB 91.2 MB/s eta 0:00:00
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'"
+1676620093271,Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/ac5451a878f21055fadb5522c95e4d7b/model/e2e-1/requirements.txt (line 2)) (1.24.1)
+1676620093271,"Collecting tqdm>=4.27
+  Downloading tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 17.6 MB/s eta 0:00:00"
+1676620093271,"Collecting pyyaml>=5.1
+  Downloading PyYAML-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (701 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 701.2/701.2 kB 69.6 MB/s eta 0:00:00"
+1676620093271,"Collecting typing-extensions
+  Downloading typing_extensions-4.5.0-py3-none-any.whl (27 kB)"
+1676620093522,"Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 78.2 MB/s eta 0:00:00"
+1676620098282,"Collecting nvidia-cudnn-cu11==8.5.0.96
+  Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)"
+1676620102297,     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 2.4 MB/s eta 0:00:00
+1676620102547,"Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 80.0 MB/s eta 0:00:00"
+1676620106809,"Collecting nvidia-cublas-cu11==11.10.3.66
+  Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 4.8 MB/s eta 0:00:00"
+1676620106809,Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/ac5451a878f21055fadb5522c95e4d7b/model/e2e-1/requirements.txt (line 1)) (0.38.4)
+1676620107060,Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/ac5451a878f21055fadb5522c95e4d7b/model/e2e-1/requirements.txt (line 1)) (65.6.3)
+1676620107060,Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/ac5451a878f21055fadb5522c95e4d7b/model/e2e-1/requirements.txt (line 2)) (1.14.0)
+1676620107060,"Collecting click
+  Downloading click-8.1.3-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 kB 27.0 MB/s eta 0:00:00"
+1676620107060,"Collecting joblib
+  Downloading joblib-1.2.0-py3-none-any.whl (297 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.0/298.0 kB 58.1 MB/s eta 0:00:00"
+1676620107561,"Building wheels for collected packages: sacremoses
+  Building wheel for sacremoses (setup.py): started
+  Building wheel for sacremoses (setup.py): finished with status 'done'
+  Created wheel for sacremoses: filename=sacremoses-0.0.53-py3-none-any.whl size=895241 sha256=a616bfb473fdd19ca346223c2968789ee193896bc9cb7ba4c0094939d1f9a431
+  Stored in directory: /root/.cache/pip/wheels/64/a3/ff/01dc060d7fc51176b3ce7cf1561466a12e658164b594747547"
+1676620107812,Successfully built sacremoses
+1676620112282,"Installing collected packages: tokenizers, typing-extensions, tqdm, regex, pyyaml, packaging, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, joblib, filelock, click, sacremoses, nvidia-cudnn-cu11, huggingface-hub, transformers, torch"
+1676620136143,Successfully installed click-8.1.3 filelock-3.9.0 huggingface-hub-0.0.12 joblib-1.2.0 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 packaging-23.0 pyyaml-6.0 regex-2022.10.31 sacremoses-0.0.53 tokenizers-0.10.3 torch-1.13.1 tqdm-4.64.1 transformers-4.9.1 typing-extensions-4.5.0
+1676620136143,WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+1676620136143,[notice] A new release of pip available: 22.3.1 -> 23.0
+1676620140283,"[notice] To update, run: python3 -m pip install --upgrade pip"
+1676620144168,I0217 07:49:03.944046 86 model_lifecycle.cc:694] successfully loaded 'ac5451a878f21055fadb5522c95e4d7b' version 1
+1676620144168,I0217 07:49:04.043013 86 sagemaker_server.cc:449] Invoking SageMaker TargetModel: e2e-1.tar.gz
+1676620144168,INFO:1.model:Request: <c_python_backend_utils.InferenceRequest object at 0x7f3d90713a70>
+1676620144168,"INFO:1.model:in_0: [[b'Sentence 1']
+ [b'Sentence 2']]"
+1676620144168,INFO:1.model:decoded_object:\xa0Sentence 1
+1676620144168,INFO:1.model:decoded_object:\xa0Sentence 2
+1676620144669,"INFO:1.model:tok_batch: ['Sentence 1', 'Sentence 2']"
+1676620144669,"INFO:1.model:token_embeddings: tensor([[[-0.0062, -0.0442, -0.0053,  ..., -0.0123,  0.0586,  0.0349],
+         [-0.0332, -0.3966, -0.2442,  ...,  0.1561, -0.1323, -0.4342],
+         [-0.2117, -0.1275, -0.2812,  ..., -0.1513, -0.0505, -0.3380],
+         ...,
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190],
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190],
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190]],
+        [[ 0.0013, -0.0214, -0.0183,  ..., -0.0470,  0.0564,  0.0489],
+         [-0.0374, -0.3897, -0.2319,  ...,  0.1721, -0.0995, -0.3544],
+         [-0.2257, -0.1322, -0.2731,  ..., -0.1091, -0.0801, -0.2724],
+         ...,
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223],
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223],
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223]]],
+       device='cuda:0')"
+1676620144669,"INFO:1.model:attention_mask: tensor([[1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0')"
+1676620144669,"INFO:1.model:out_0: [[-0.00097987 -0.00352379 -0.004177   ... -0.00120587 -0.00202981
+  -0.00294534]
+ [-0.00035618 -0.0042098  -0.00419457 ... -0.00180162 -0.00149669
+  -0.0010363 ]]"
+1676620149282,INFO:1.model:out_tensor_0: <c_python_backend_utils.Tensor object at 0x7f3d912978f0>
+1676620156953,I0217 07:49:16.742552 86 sagemaker_server.cc:343] Loading SageMaker TargetModel: e2e-2.tar.gz
+1676620156953,I0217 07:49:16.742732 86 model_repository_manager.cc:1376] Model repository registered: /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model
+1676620156953,W0217 07:49:16.743226 86 model_lifecycle.cc:107] ignore version directory '.ipynb_checkpoints' which fails to convert to integral number
+1676620156953,W0217 07:49:16.743256 86 model_lifecycle.cc:107] ignore version directory 'model' which fails to convert to integral number
+1676620156953,W0217 07:49:16.743269 86 model_lifecycle.cc:107] ignore version directory 'tokenizer' which fails to convert to integral number
+1676620158207,I0217 07:49:16.743289 86 model_lifecycle.cc:459] loading: 063a23ff60eaff975c33e997e2d9c40d:1
+1676620158709,I0217 07:49:17.994592 86 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: 063a23ff60eaff975c33e997e2d9c40d_0 (GPU device 0)
+1676620158709,Requirement already satisfied: torch in /usr/local/lib/python3.8/dist-packages (from -r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (1.13.1)
+1676620158709,Requirement already satisfied: transformers==4.9.1 in /usr/local/lib/python3.8/dist-packages (from -r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (4.9.1)
+1676620158709,Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (4.64.1)
+1676620158709,Requirement already satisfied: huggingface-hub==0.0.12 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (0.0.12)
+1676620158709,Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (2022.10.31)
+1676620158709,Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (1.24.1)
+1676620158709,Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (6.0)
+1676620158709,Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (2.22.0)
+1676620158709,Requirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (3.9.0)
+1676620158709,Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (23.0)
+1676620158709,Requirement already satisfied: sacremoses in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (0.0.53)
+1676620158959,"Requirement already satisfied: tokenizers<0.11,>=0.10.1 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (0.10.3)"
+1676620158959,Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from huggingface-hub==0.0.12->transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (4.5.0)
+1676620158959,Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (11.7.99)
+1676620158959,Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (11.7.99)
+1676620158959,Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (11.10.3.66)
+1676620158959,Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (8.5.0.96)
+1676620158959,Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (65.6.3)
+1676620158959,Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 1)) (0.38.4)
+1676620158959,Requirement already satisfied: click in /usr/local/lib/python3.8/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (8.1.3)
+1676620158959,Requirement already satisfied: joblib in /usr/local/lib/python3.8/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (1.2.0)
+1676620158959,Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/063a23ff60eaff975c33e997e2d9c40d/model/e2e-2/requirements.txt (line 2)) (1.14.0)
+1676620158959,WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+1676620158959,[notice] A new release of pip available: 22.3.1 -> 23.0
+1676620163286,"[notice] To update, run: python3 -m pip install --upgrade pip"
+1676620168020,I0217 07:49:27.906215 86 model_lifecycle.cc:694] successfully loaded '063a23ff60eaff975c33e997e2d9c40d' version 1
+1676620168021,I0217 07:49:27.908799 86 sagemaker_server.cc:449] Invoking SageMaker TargetModel: e2e-2.tar.gz
+1676620168021,INFO:1.model:Request: <c_python_backend_utils.InferenceRequest object at 0x7fbd47bd5ab0>
+1676620168021,"INFO:1.model:in_0: [[b'Sentence 1']
+ [b'Sentence 2']]"
+1676620168021,INFO:1.model:decoded_object:\xa0Sentence 1
+1676620168021,INFO:1.model:decoded_object:\xa0Sentence 2
+1676620168518,"INFO:1.model:tok_batch: ['Sentence 1', 'Sentence 2']"
+1676620168518,"INFO:1.model:token_embeddings: tensor([[[-0.0062, -0.0442, -0.0053,  ..., -0.0123,  0.0586,  0.0349],
+         [-0.0332, -0.3966, -0.2442,  ...,  0.1561, -0.1323, -0.4342],
+         [-0.2117, -0.1275, -0.2812,  ..., -0.1513, -0.0505, -0.3380],
+         ...,
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190],
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190],
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190]],
+        [[ 0.0013, -0.0214, -0.0183,  ..., -0.0470,  0.0564,  0.0489],
+         [-0.0374, -0.3897, -0.2319,  ...,  0.1721, -0.0995, -0.3544],
+         [-0.2257, -0.1322, -0.2731,  ..., -0.1091, -0.0801, -0.2724],
+         ...,
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223],
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223],
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223]]],
+       device='cuda:0')"
+1676620168518,"INFO:1.model:attention_mask: tensor([[1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0')"
+1676620168518,"INFO:1.model:out_0: [[-0.00097987 -0.00352379 -0.004177   ... -0.00120587 -0.00202981
+  -0.00294534]
+ [-0.00035618 -0.0042098  -0.00419457 ... -0.00180162 -0.00149669
+  -0.0010363 ]]"
+1676620173283,INFO:1.model:out_tensor_0: <c_python_backend_utils.Tensor object at 0x7fbd486e4f30>
+1676620180550,I0217 07:49:40.355907 86 sagemaker_server.cc:343] Loading SageMaker TargetModel: e2e-3.tar.gz
+1676620180550,I0217 07:49:40.356039 86 model_repository_manager.cc:1376] Model repository registered: /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model
+1676620180550,W0217 07:49:40.356419 86 model_lifecycle.cc:107] ignore version directory '.ipynb_checkpoints' which fails to convert to integral number
+1676620180550,W0217 07:49:40.356435 86 model_lifecycle.cc:107] ignore version directory 'model' which fails to convert to integral number
+1676620180550,W0217 07:49:40.356444 86 model_lifecycle.cc:107] ignore version directory 'tokenizer' which fails to convert to integral number
+1676620181803,I0217 07:49:40.356473 86 model_lifecycle.cc:459] loading: d58aaf4231e310c54fab81a2650a4243:1
+1676620182305,I0217 07:49:41.610417 86 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: d58aaf4231e310c54fab81a2650a4243_0 (GPU device 0)
+1676620182305,Requirement already satisfied: torch in /usr/local/lib/python3.8/dist-packages (from -r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (1.13.1)
+1676620182556,Requirement already satisfied: transformers==4.9.1 in /usr/local/lib/python3.8/dist-packages (from -r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (4.9.1)
+1676620182556,"Requirement already satisfied: tokenizers<0.11,>=0.10.1 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (0.10.3)"
+1676620182556,Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (4.64.1)
+1676620182556,Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (2.22.0)
+1676620182556,Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (2022.10.31)
+1676620182556,Requirement already satisfied: sacremoses in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (0.0.53)
+1676620182556,Requirement already satisfied: huggingface-hub==0.0.12 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (0.0.12)
+1676620182556,Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (6.0)
+1676620182556,Requirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (3.9.0)
+1676620182556,Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (23.0)
+1676620182556,Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (1.24.1)
+1676620182556,Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from huggingface-hub==0.0.12->transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (4.5.0)
+1676620182556,Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (11.10.3.66)
+1676620182556,Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (11.7.99)
+1676620182556,Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (8.5.0.96)
+1676620182556,Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (11.7.99)
+1676620182556,Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (0.38.4)
+1676620182556,Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 1)) (65.6.3)
+1676620182556,Requirement already satisfied: joblib in /usr/local/lib/python3.8/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (1.2.0)
+1676620182556,Requirement already satisfied: click in /usr/local/lib/python3.8/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (8.1.3)
+1676620182556,Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/d58aaf4231e310c54fab81a2650a4243/model/e2e-3/requirements.txt (line 2)) (1.14.0)
+1676620182556,WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+1676620182556,[notice] A new release of pip available: 22.3.1 -> 23.0
+1676620187283,"[notice] To update, run: python3 -m pip install --upgrade pip"
+1676620191450,I0217 07:49:51.286921 86 model_lifecycle.cc:694] successfully loaded 'd58aaf4231e310c54fab81a2650a4243' version 1
+1676620191451,I0217 07:49:51.309088 86 sagemaker_server.cc:449] Invoking SageMaker TargetModel: e2e-3.tar.gz
+1676620191451,INFO:1.model:Request: <c_python_backend_utils.InferenceRequest object at 0x7f0a44912a70>
+1676620191451,"INFO:1.model:in_0: [[b'Sentence 1']
+ [b'Sentence 2']]"
+1676620191451,INFO:1.model:decoded_object:\xa0Sentence 1
+1676620191451,INFO:1.model:decoded_object:\xa0Sentence 2
+1676620191948,"INFO:1.model:tok_batch: ['Sentence 1', 'Sentence 2']"
+1676620191948,"INFO:1.model:token_embeddings: tensor([[[-0.0062, -0.0442, -0.0053,  ..., -0.0123,  0.0586,  0.0349],
+         [-0.0332, -0.3966, -0.2442,  ...,  0.1561, -0.1323, -0.4342],
+         [-0.2117, -0.1275, -0.2812,  ..., -0.1513, -0.0505, -0.3380],
+         ...,
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190],
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190],
+         [ 0.0952, -0.0703, -0.2060,  ..., -0.0878, -0.1370,  0.1190]],
+        [[ 0.0013, -0.0214, -0.0183,  ..., -0.0470,  0.0564,  0.0489],
+         [-0.0374, -0.3897, -0.2319,  ...,  0.1721, -0.0995, -0.3544],
+         [-0.2257, -0.1322, -0.2731,  ..., -0.1091, -0.0801, -0.2724],
+         ...,
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223],
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223],
+         [ 0.1179, -0.0245, -0.2249,  ..., -0.1080, -0.1311,  0.1223]]],
+       device='cuda:0')"
+1676620191948,"INFO:1.model:attention_mask: tensor([[1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0, 0, 0]], device='cuda:0')"
+1676620191948,"INFO:1.model:out_0: [[-0.00097987 -0.00352379 -0.004177   ... -0.00120587 -0.00202981
+  -0.00294534]
+ [-0.00035618 -0.0042098  -0.00419457 ... -0.00180162 -0.00149669
+  -0.0010363 ]]"
+1676620196282,INFO:1.model:out_tensor_0: <c_python_backend_utils.Tensor object at 0x7f0a45494e30>
+1676620204232,I0217 07:50:04.074319 86 sagemaker_server.cc:343] Loading SageMaker TargetModel: e2e-4.tar.gz
+1676620204232,I0217 07:50:04.074448 86 model_repository_manager.cc:1376] Model repository registered: /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model
+1676620204232,W0217 07:50:04.074916 86 model_lifecycle.cc:107] ignore version directory '.ipynb_checkpoints' which fails to convert to integral number
+1676620204232,W0217 07:50:04.074939 86 model_lifecycle.cc:107] ignore version directory 'model' which fails to convert to integral number
+1676620204232,W0217 07:50:04.074961 86 model_lifecycle.cc:107] ignore version directory 'tokenizer' which fails to convert to integral number
+1676620205486,I0217 07:50:04.074977 86 model_lifecycle.cc:459] loading: 561a298fd5078e08cf4ce486e06b5643:1
+1676620205988,I0217 07:50:05.323236 86 python_be.cc:1856] TRITONBACKEND_ModelInstanceInitialize: 561a298fd5078e08cf4ce486e06b5643_0 (GPU device 0)
+1676620205988,Requirement already satisfied: torch in /usr/local/lib/python3.8/dist-packages (from -r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (1.13.1)
+1676620206238,Requirement already satisfied: transformers==4.9.1 in /usr/local/lib/python3.8/dist-packages (from -r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (4.9.1)
+1676620206238,Requirement already satisfied: tqdm>=4.27 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (4.64.1)
+1676620206238,Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (2.22.0)
+1676620206238,Requirement already satisfied: huggingface-hub==0.0.12 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (0.0.12)
+1676620206238,Requirement already satisfied: packaging in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (23.0)
+1676620206238,Requirement already satisfied: numpy>=1.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (1.24.1)
+1676620206238,"Requirement already satisfied: tokenizers<0.11,>=0.10.1 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (0.10.3)"
+1676620206238,Requirement already satisfied: sacremoses in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (0.0.53)
+1676620206238,Requirement already satisfied: filelock in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (3.9.0)
+1676620206238,Requirement already satisfied: regex!=2019.12.17 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (2022.10.31)
+1676620206238,Requirement already satisfied: pyyaml>=5.1 in /usr/local/lib/python3.8/dist-packages (from transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (6.0)
+1676620206238,Requirement already satisfied: typing-extensions in /usr/local/lib/python3.8/dist-packages (from huggingface-hub==0.0.12->transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (4.5.0)
+1676620206238,Requirement already satisfied: nvidia-cublas-cu11==11.10.3.66 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (11.10.3.66)
+1676620206238,Requirement already satisfied: nvidia-cuda-runtime-cu11==11.7.99 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (11.7.99)
+1676620206238,Requirement already satisfied: nvidia-cudnn-cu11==8.5.0.96 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (8.5.0.96)
+1676620206238,Requirement already satisfied: nvidia-cuda-nvrtc-cu11==11.7.99 in /usr/local/lib/python3.8/dist-packages (from torch->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (11.7.99)
+1676620206238,Requirement already satisfied: wheel in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (0.38.4)
+1676620206238,Requirement already satisfied: setuptools in /usr/local/lib/python3.8/dist-packages (from nvidia-cublas-cu11==11.10.3.66->torch->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 1)) (65.6.3)
+1676620206238,Requirement already satisfied: joblib in /usr/local/lib/python3.8/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (1.2.0)
+1676620206238,Requirement already satisfied: click in /usr/local/lib/python3.8/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (8.1.3)
+1676620206238,Requirement already satisfied: six in /usr/lib/python3/dist-packages (from sacremoses->transformers==4.9.1->-r /opt/ml/models/561a298fd5078e08cf4ce486e06b5643/model/e2e-4/requirements.txt (line 2)) (1.14.0)
+1676620206238,WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+1676620206238,[notice] A new release of pip available: 22.3.1 -> 23.0
+1676620210294,"[notice] To update, run: python3 -m pip install --upgrade pip"
+1676620556283,I0217 07:55:51.958416 86 sagemaker_server.cc:343] Loading SageMaker TargetModel: e2e-4.tar.gz
+1676620616282,I0217 07:56:52.049971 86 sagemaker_server.cc:343] Loading SageMaker TargetModel: e2e-4.tar.gz
